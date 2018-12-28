@@ -16,6 +16,7 @@ body {
 
 .grid {
   display: grid;
+  margin-bottom: 10rem;
 }
 
 .header {
@@ -40,6 +41,10 @@ body {
   background-color: whiteSmoke;
 }
 
+.day--today {
+  background-color: gold;
+}
+
 .day--border-top {
   border-top: 3px solid black;
 }
@@ -56,7 +61,6 @@ body {
   border-top: 3px solid black;
   border-left: 3px solid black;
 }
-
 
 .day-number {
   font-weight: bolder;

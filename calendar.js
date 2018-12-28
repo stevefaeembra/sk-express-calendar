@@ -68,6 +68,15 @@ const calendarIterator = function(startDate, days) {
       cssClasses += " day--weekend";
     }
 
+    // is it today?
+    const today = new Date();
+    if (thisDay.getDate() == today.getDate() &&
+        thisDay.getMonth() == today.getMonth() &&
+        thisDay.getFullYear() == today.getFullYear()
+    ) {
+      cssClasses += " day--today";
+    }
+
     // add to list
     currWeek.push({
       day: toDay,
