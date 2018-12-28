@@ -6,5 +6,34 @@
 
 html {
   font-size: 16px;
-  background-color: wheat;
+  background-color: white;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.header {
+  background: wheat;
+  color: black;
+}
+.week {
+  display: grid;
+  grid-template-columns: repeat(7,50px);
+}
+
+.day {
+  border: 1px solid black;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.day--weekend {
+  background-color: lightGrey;
 }

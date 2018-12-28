@@ -26,7 +26,8 @@ const calendarIterator = function(startDate, days) {
   // each week starts with Sunday
   // each day has a day/month/year value
   //
-  const cal = calendar(startDate, 90);
+  const cal = calendar(startDate, days);
+  let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   let week = 0;
   let result=[];
   let weekString="";
@@ -38,7 +39,7 @@ const calendarIterator = function(startDate, days) {
     }
     let toDay = (thisDay.getDate()<10) ? "0" : "";
     toDay += thisDay.getDate();
-    let toMonth = (thisDay.getMonth()+1);
+    let toMonth = months[thisDay.getMonth()];
     let toYear = (thisDay.getFullYear());
     currWeek.push({
       day: toDay,

@@ -6,3 +6,39 @@ html(lang='en')
     body  
       h1
         | Hello Calendar!
+      content
+        div(class='grid')
+          div(class='week')
+            div(class='day header')
+              p 
+                | Sun
+            div(class='day header')
+              p 
+                | Mon
+            div(class='day header')
+              p 
+                | Tue
+            div(class='day header')
+              p 
+                | Wed
+            div(class='day header')
+              p 
+                | Thu
+            div(class='day header')
+              p 
+                | Fri
+            div(class='day header')
+              p 
+                | Sat
+          - for (var week of data) {
+            div(class='week')
+              - for (var day of week) {
+                  div(class='day')
+                    div(class='day-number')
+                      p 
+                      = day.day
+                    div(class='month-number')
+                      p 
+                      = day.month
+              -}
+          - }
