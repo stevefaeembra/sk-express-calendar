@@ -34,6 +34,23 @@ body {
   flex-direction: column;
 }
 
+.day--border-top {
+  border-top: 3px solid black;
+}
+
+.day--border-left {
+  border-left: 3px solid black;
+}
+
+.day--border-right{
+  border-right: 3px solid black;
+}
+
+.day--first-of-month {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+}
+
 .day--weekend {
   background-color: lightGrey;
 }
