@@ -40,3 +40,10 @@ localhost:3000/date?year=2012&month=1&day=17
 ```
 
 note that months are 1-indexed for this endpoint, so January is 1, February is 2 etc.
+
+Design notes
+============
+- Thick black borders show the boundary between months.
+- Thick magenta borders show the boundary between years.
+- Weekends are shown in a buff colour
+- Today's date is shown with a red border
