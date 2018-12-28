@@ -68,6 +68,8 @@ body {
 
 .day--border-top-year {
   border-top: 6px solid magenta;
+  padding-top: calc(.5rem - 5px);
+  padding-left: calc(.5rem - 5px);
 }
 
 .day--border-left {
@@ -86,6 +88,9 @@ body {
 .day--first-of-year {
   border-top: 6px solid magenta;
   border-left: 6px solid magenta;
+  padding-top: calc(.5rem - 5px);
+  padding-left: calc(.5rem - 5px);
+
 }
 
 .day-number {
