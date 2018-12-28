@@ -3,6 +3,7 @@ Node/Express calendar
 
 This Node/Express API returns calendar views
 
+![Example screenshot](./images/screenshot.png)
 
 Installation
 ============
