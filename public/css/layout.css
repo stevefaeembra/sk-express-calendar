@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  width: 50%;
+  width: calc(7*58px);
   margin: 0 auto;
 }
 
@@ -32,8 +32,8 @@ body {
 .header {
   display:fixed;
   top:0px;
-  background: lightGray;
-  color: black;
+  background: black;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
 }
