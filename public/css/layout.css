@@ -49,6 +49,7 @@ body {
   padding: .5rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .day--weekend {
@@ -66,7 +67,7 @@ body {
 }
 
 .day--border-top-year {
-  border-top: 6px solid black;
+  border-top: 6px solid magenta;
 }
 
 .day--border-left {
@@ -83,8 +84,8 @@ body {
 }
 
 .day--first-of-year {
-  border-top: 6px solid black;
-  border-left: 6px solid black;
+  border-top: 6px solid magenta;
+  border-left: 6px solid magenta;
 }
 
 .day-number {
