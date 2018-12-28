@@ -61,9 +61,11 @@ const calendarIterator = function(startDate, days) {
     // thick borders to left of sunday and right of saturday
     if (thisDay.getDay()==0) {
       cssClasses += " day--border-left";
+      cssClasses += " day--weekend";
     }
     if (thisDay.getDay()==6) {
       cssClasses += " day--border-right";
+      cssClasses += " day--weekend";
     }
 
     // add to list
