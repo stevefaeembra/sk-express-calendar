@@ -15,13 +15,13 @@ const port = process.env.PORT || 3000
 
 app.use('/:year', (req,res) => {
   const year = req.params["year"];
-  const it = calendarIterator(new Date(year,0,1),365);
+  const it = calendarIterator(new Date(year,0,1),730);
   console.log(it);
   res.render("calendar",{data:it, message: `for ${year}`});
 });
 
 app.use('/', (req,res) => {
-  const it = calendarIterator(new Date(),365);
+  const it = calendarIterator(new Date(),730);
   res.render("calendar",{data:it, message: "from today"});
 });
 
