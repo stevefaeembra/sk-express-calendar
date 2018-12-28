@@ -7,7 +7,7 @@ html(lang='en')
       h1
         | Steve's Calendar View
       content
-        div(class='grid')
+        div(class='header-grid')
           div(class='week')
             div(class='day header')
               p 
@@ -30,6 +30,7 @@ html(lang='en')
             div(class='day header')
               p 
                 | Sat
+        div(class='grid')
           - for (var week of data) {
             div(class='week')
               - for (var day of week) {

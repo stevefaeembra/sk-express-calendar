@@ -17,14 +17,27 @@ body {
 .grid {
   display: grid;
   margin-bottom: 10rem;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.header-grid {
+  display: grid;
+}
+
+.day.header {
+  text-align: center;
 }
 
 .header {
+  display:fixed;
+  top:0px;
   background: lightGray;
   color: black;
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .week {
   display: grid;
   grid-template-columns: repeat(7,50px);
