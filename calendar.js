@@ -1,6 +1,11 @@
 // calendar
 
 const calendar = function *(startDate, days) {
+
+  // this is a generator function, returns a series of dates
+  // one day at a time, for the specified number of days
+  // for simplicity, rounds down provided date to sunday of the same week
+
   let result = [];
   // change it to go back to start of week (0=sun)
   let startDate2 = new Date(startDate);
@@ -14,19 +19,35 @@ const calendar = function *(startDate, days) {
   };
 };
 
-
-const cal = calendar(new Date(), 90);
-let week = 0;
-console.log("Su Mo Tu We Th Fr Sa");
-let weekString="";
-for (var day of cal) {
-  if (day.getDay()===0) {
-    console.log(weekString);
-    weekString="";
-    weekString += (day.getDate()<10) ? "0" : "";
-    weekString += day.getDate() + " ";
-  } else {
-    weekString += (day.getDate()<10) ? "0" : "";
-    weekString += day.getDate() + " ";
-  }
+const calendarIterator = function(startDate, days) {
+  //
+  // returns an array of arrays
+  // each subarray represents one week
+  // each week starts with Sunday
+  // each day has a day/month/year value
+  //
+  const cal = calendar(startDate, 90);
+  let week = 0;
+  let result=[];
+  let weekString="";
+  let currWeek = [];
+  for (var thisDay of cal) {
+    if (thisDay.getDay()===0) {
+      result.push(currWeek);
+      currWeek = [];
+    }
+    let toDay = (thisDay.getDate()<10) ? "0" : "";
+    toDay += thisDay.getDate();
+    let toMonth = (thisDay.getMonth()+1);
+    let toYear = (thisDay.getFullYear());
+    currWeek.push({
+      day: toDay,
+      month: toMonth,
+      year: toYear
+    })
+  };
+  result.shift(); // get rid of empty first row
+  return result;
 }
+
+module.exports = calendarIterator;
