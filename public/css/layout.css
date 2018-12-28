@@ -60,18 +60,20 @@ body {
 
 .day--today {
   border: 4px solid red;
+  padding-top: calc(.5rem - 2px);
+  padding-left: calc(.5rem - 2px);
 }
 
 .day--border-top {
   border-top: 3px solid black;
-  padding-top: calc(.5rem - 2px);
-  padding-left: calc(.5rem - 2px);
+  padding-top: calc(.5rem - 6px);
+  padding-left: calc(.5rem - 6px);
 }
 
 .day--border-top-year {
   border-top: 6px solid magenta;
   padding-top: calc(.5rem - 5px);
-  padding-left: calc(.5rem - 5px);
+  padding-left: calc(.5rem - 4px);
 }
 
 .day--border-left {
