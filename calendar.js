@@ -41,10 +41,15 @@ const calendarIterator = function(startDate, days) {
     toDay += thisDay.getDate();
     let toMonth = months[thisDay.getMonth()];
     let toYear = (thisDay.getFullYear());
+    let cssClasses = "day";
+    if (thisDay.getDate()=== 1) {
+      cssClasses += " day--first-of-month";
+    }
     currWeek.push({
       day: toDay,
       month: toMonth,
-      year: toYear
+      year: toYear,
+      classes: cssClasses
     })
   };
   result.shift(); // get rid of empty first row

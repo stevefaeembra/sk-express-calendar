@@ -33,7 +33,7 @@ html(lang='en')
           - for (var week of data) {
             div(class='week')
               - for (var day of week) {
-                  div(class='day')
+                  div(class = day.classes )
                     div(class='day-number')
                       p 
                       = day.day
