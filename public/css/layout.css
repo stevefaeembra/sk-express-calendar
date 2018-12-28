@@ -65,6 +65,10 @@ body {
   border-top: 3px solid black;
 }
 
+.day--border-top-year {
+  border-top: 6px solid black;
+}
+
 .day--border-left {
   border-left: 3px solid black;
 }
@@ -76,6 +80,11 @@ body {
 .day--first-of-month {
   border-top: 3px solid black;
   border-left: 3px solid black;
+}
+
+.day--first-of-year {
+  border-top: 6px solid black;
+  border-left: 6px solid black;
 }
 
 .day-number {

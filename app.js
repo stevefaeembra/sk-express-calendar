@@ -16,7 +16,6 @@ const port = process.env.PORT || 3000
 app.use('/:year', (req,res) => {
   const year = req.params["year"];
   const it = calendarIterator(new Date(year,0,1),730);
-  console.log(it);
   res.render("calendar",{data:it, message: `for ${year}`});
 });
 

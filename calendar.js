@@ -51,11 +51,23 @@ const calendarIterator = function(startDate, days) {
       cssClasses += " day--first-of-month";
     };
 
+    // first day of a year
+    if (thisDay.getDate()=== 1 && thisDay.getMonth()==0) {
+      cssClasses += " day--first-of-year";
+    };
+
     // check to see if the day 1 week before this date is in a different month
     let oneWeekBefore = new Date(thisDay);
     oneWeekBefore.setDate(thisDay.getDate()-7);
     if (oneWeekBefore.getMonth() != thisDay.getMonth()) {
       cssClasses += " day--border-top";
+    }
+
+    // check to see if the day 1 week before this date is in a different year
+    let oneYearBefore = new Date(thisDay);
+    oneYearBefore.setDate(thisDay.getDate()-7);
+    if (oneYearBefore.getFullYear() < thisDay.getFullYear()) {
+      cssClasses += " day--border-top-year";
     }
 
     // thick borders to left of sunday and right of saturday
