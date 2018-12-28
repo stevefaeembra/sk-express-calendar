@@ -66,14 +66,14 @@ body {
 
 .day--border-top {
   border-top: 3px solid black;
-  padding-top: calc(.5rem - 6px);
-  padding-left: calc(.5rem - 6px);
+  padding-top: calc(.5rem - 2px);
+  padding-left: calc(.5rem - 1px);
 }
 
 .day--border-top-year {
   border-top: 6px solid magenta;
   padding-top: calc(.5rem - 5px);
-  padding-left: calc(.5rem - 4px);
+  padding-left: calc(.5rem - 3px);
 }
 
 .day--border-left {
