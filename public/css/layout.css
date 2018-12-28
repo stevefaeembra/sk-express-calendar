@@ -64,6 +64,8 @@ body {
 
 .day--border-top {
   border-top: 3px solid black;
+  padding-top: calc(.5rem - 2px);
+  padding-left: calc(.5rem - 2px);
 }
 
 .day--border-top-year {
