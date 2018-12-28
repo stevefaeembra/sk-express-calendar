@@ -13,11 +13,18 @@ app.use('/', express.static(publicPath));
 const port = process.env.PORT || 3000
 
 
-app.use('/', (req,res) => {
-  const it = calendarIterator(new Date(),180);
+app.use('/:year', (req,res) => {
+  const year = req.params["year"];
+  const it = calendarIterator(new Date(year,0,1),365);
   console.log(it);
   res.render("calendar",{data:it});
 });
+
+app.use('/', (req,res) => {
+  const it = calendarIterator(new Date(),365);
+  res.render("calendar",{data:it});
+});
+
 
 app.listen(port, function () {
   console.log(`Started server on port ${port}`);
