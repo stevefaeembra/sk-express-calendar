@@ -48,3 +48,4 @@ Design notes
 - Thick magenta borders show the boundary between years.
 - Weekends are shown in a buff colour
 - Today's date is shown with a red border
+- Shows a 😱 emoji on any Friday 13th
