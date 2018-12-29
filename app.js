@@ -30,7 +30,7 @@ app.use('/:year', (req,res) => {
 
 
 app.use('/', (req,res) => {
-  const it = calendarIterator(new Date(2019,0,1),730);
+  const it = calendarIterator(new Date(),730);
   res.render("calendar",{data:it, message: "from today"});
 });
 
