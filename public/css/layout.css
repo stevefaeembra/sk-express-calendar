@@ -46,11 +46,22 @@ body {
 }
 
 .day {
+  position: relative;
   border: 1px dotted rgba(0,0,0,.2);
   padding: .5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.day--friday13th::after {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  left:0;
+  font-size: 1.2rem;
+  z-index: 100;
+  content:'😱';
 }
 
 .day--weekend {

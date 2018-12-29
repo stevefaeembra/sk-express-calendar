@@ -89,6 +89,11 @@ const calendarIterator = function(startDate, days) {
       cssClasses += " day--today";
     }
 
+    // friday the 13th? ;-)
+    if (thisDay.getDate() == 13 && thisDay.getDay()==5) {
+      cssClasses += " day--friday13th";
+    }
+
     // add to list
     currWeek.push({
       day: toDay,
