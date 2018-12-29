@@ -89,11 +89,11 @@ body {
 }
 
 .day--border-left {
-  border-left: 3px solid black;
+  border-left: 4px solid black;
 }
 
 .day--border-right{
-  border-right: 3px solid black;
+  border-right: 4px solid black;
 }
 
 .day--first-of-month {
